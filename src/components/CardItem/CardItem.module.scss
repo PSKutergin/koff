@@ -1,0 +1,60 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @media (min-width: 580px) {
+    gap: 20px;
+  }
+}
+
+.image {
+  border-radius: 16px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  @media (min-width: 580px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  width: fit-content;
+  @media (min-width: 580px) {
+    font-size: 16px;
+  }
+}
+
+.price {
+  width: fit-content;
+  font-size: 16px;
+
+  @media (min-width: 580px) {
+    font-size: 20px;
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 32px;
+  border: 1px solid #780096;
+  color: #780096;
+}
+
+.heart {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 16px;
+}

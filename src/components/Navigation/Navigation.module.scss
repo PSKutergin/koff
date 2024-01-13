@@ -1,0 +1,36 @@
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+.link {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+
+  @media (min-width: 580px) {
+    flex-direction: row;
+  }
+
+  &:hover,
+  &:active {
+    color: #780096;
+  }
+
+  &:focus-visible {
+    color: #780096;
+    outline-color: #780096;
+  }
+}
+
+.text {
+  position: fixed;
+  transform: scale(0);
+
+  @media (min-width: 580px) {
+    position: unset;
+    transform: scale(1);
+  }
+}

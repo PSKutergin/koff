@@ -1,0 +1,13 @@
+.developers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.link {
+  &:hover,
+  &:active,
+  &:focus-visible {
+    color: #780096;
+  }
+}

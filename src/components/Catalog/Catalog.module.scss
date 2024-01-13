@@ -1,0 +1,22 @@
+.catalog {
+  padding: 24px 0;
+  overflow: hidden;
+
+  @media (min-width: 580px) {
+    padding: 32px 0;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+
+.item {
+  padding: 8px 14px 10px 14px;
+  border-radius: 32px;
+  background: #eeeff2;
+  color: #969eae;
+}
