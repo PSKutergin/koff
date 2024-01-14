@@ -1,21 +1,18 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const fetchCategories = createAsyncThunk(
-  "categories/fetchCategories",
+export const fetchGoods = createAsyncThunk(
+  "goods/fetchGoods",
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const token = state.auth.accessToken;
 
-    const response = await fetch(
-      "https://koff-api.vercel.app/api/productCategories",
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
+    const response = await fetch("https://koff-api.vercel.app/api/products", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
-    );
+    });
 
     if (!response.ok) {
       throw new Error("Failed to fetch categories");
@@ -32,22 +29,22 @@ const initialState = {
   error: null,
 };
 
-const categoriesSlice = createSlice({
-  name: "categories",
+const goodsSlice = createSlice({
+  name: "goods",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchCategories.pending, (state) => {
+      .addCase(fetchGoods.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchCategories.fulfilled, (state, action) => {
+      .addCase(fetchGoods.fulfilled, (state, action) => {
         state.data = action.payload;
         state.loading = false;
         state.error = null;
       })
-      .addCase(fetchCategories.rejected, (state, action) => {
+      .addCase(fetchGoods.rejected, (state, action) => {
         state.data = [];
         state.loading = false;
         state.error = action.error.message;
@@ -55,4 +52,4 @@ const categoriesSlice = createSlice({
   },
 });
 
-export default categoriesSlice.reducer;
+export default goodsSlice.reducer;

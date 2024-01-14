@@ -1,14 +1,14 @@
 /* eslint-disable max-len */
 import s from "./CardItem.module.scss";
 
-export const CardItem = () => (
+export const CardItem = ({ item }) => (
   <article className={s.card}>
     <div className={s.image}>
       <img src="./image/goods/photo.png" alt="card" />
     </div>
     <div className={s.info}>
-      <span className={s.title}>Кресло с подлокотниками</span>
-      <span className={s.price}>5000₽</span>
+      <span className={s.title}>{item.name}</span>
+      <span className={s.price}>{item.price}₽</span>
     </div>
     <button className={s.button}>В корзину</button>
     <button className={s.heart}>
