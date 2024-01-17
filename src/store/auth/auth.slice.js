@@ -4,7 +4,7 @@ import { API_URL } from "../../const";
 export const fetchAccessToken = createAsyncThunk(
   "auth/fetchAccessToken",
   async () => {
-    const response = await fetch(`${API_URL}users/accessKey`, {
+    const response = await fetch(`${API_URL}api/users/accessKey`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

@@ -7,7 +7,7 @@ export const fetchGoods = createAsyncThunk(
     const state = thunkAPI.getState();
     const token = state.auth.accessToken;
 
-    const response = await fetch(`${API_URL}products`, {
+    const response = await fetch(`${API_URL}api/products`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -16,7 +16,7 @@ export const fetchGoods = createAsyncThunk(
     });
 
     if (!response.ok) {
-      throw new Error("Failed to fetch categories");
+      throw new Error("Failed to fetch goods");
     }
 
     const data = await response.json();
