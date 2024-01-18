@@ -26,6 +26,20 @@
   align-items: center;
   overflow: hidden;
   border-radius: 16px;
+  min-width: 288px;
+  min-height: 236px;
+
+  @media (min-width: 580px) {
+    min-height: 586px;
+  }
+
+  @media (min-width: 820px) {
+    min-height: 512px;
+  }
+
+  @media (min-width: 1120px) {
+    min-height: 688px;
+  }
 }
 
 .image {
@@ -45,6 +59,19 @@
 .slideThumbnail {
   border-radius: 16px;
   overflow: hidden;
+
+  @media (min-width: 580px) {
+    min-width: 167px;
+    min-height: 138px;
+  }
+
+  @media (min-width: 820px) {
+    min-height: 120px;
+  }
+
+  @media (min-width: 820px) {
+    min-height: 162px;
+  }
 }
 
 .imgThumbnail {

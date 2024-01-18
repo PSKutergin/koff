@@ -102,6 +102,11 @@ main {
   flex-direction: column;
 }
 
-.splide__track--nav > .splide__list > .splide__slide.is-active {
+.splide__track--nav>.splide__list>.splide__slide.is-active {
   border: 0 !important;
+}
+
+.splide__track--nav>.splide__list>.splide__slide:not(.is-active) {
+  background-color: #fff;
+  opacity: 0.4;
 }

@@ -28,7 +28,7 @@ export const Card = () => {
         <div className={s.info}>
           <p className={s.price}>{"5000".toLocaleString()}&nbsp;₽</p>
           <p className={s.article}>арт. 84348945757</p>
-          <div>
+          {/* <div>
             <h3 className={s.characteristicsTitle}>Общие характеристики</h3>
             <table className={s.table}>
               <tbody>
@@ -40,9 +40,9 @@ export const Card = () => {
                 ))}
               </tbody>
             </table>
-          </div>
+          </div> */}
 
-          <div className={s.btn}></div>
+          <div className={s.btn}>В корзину</div>
           <div className={s.like}>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path

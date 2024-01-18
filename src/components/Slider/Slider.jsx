@@ -13,8 +13,6 @@ export const Slider = ({ data }) => {
     type: "loop",
     perPage: 1,
     perMove: 1,
-    fixedWidth: 832,
-    fixedHeight: 688,
     isNavigation: true,
     gap: 10,
     cover: true,
@@ -22,19 +20,13 @@ export const Slider = ({ data }) => {
   };
 
   const thumbsOptions = {
-    fixedWidth: 100,
-    fixedHeight: 64,
+    type: "loop",
     isNavigation: true,
     gap: 10,
     focus: "center",
+    perPage: 4,
     pagination: false,
     cover: true,
-    breakpoints: {
-      600: {
-        fixedWidth: 66,
-        fixedHeight: 40,
-      },
-    },
   };
 
   useEffect(() => {
