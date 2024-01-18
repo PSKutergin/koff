@@ -11,10 +11,13 @@
 }
 
 .container {
+  padding-bottom: 92px;
+
   @media (min-width: 820px) {
     display: grid;
     grid-template-columns: 66% 1fr;
     gap: 40px 16px;
+    padding-bottom: 100px;
   }
 }
 
@@ -130,12 +133,4 @@
   padding: 8px 0;
   text-align: right;
   color: #1c1c1c;
-}
-
-.splide__track--nav {
-  .splide__list {
-    .splide__slide.is-active {
-      border: none;
-    }
-  }
 }
