@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import App from "./App.jsx";
 import "normalize.css";
+import "@splidejs/react-splide/css";
 import "./index.css";
 import { store } from "./store/store.js";
 

@@ -1,9 +1,10 @@
 /* eslint-disable max-len */
+import { Link } from "react-router-dom";
 import s from "./Navigation.module.scss";
 
 export const Navigation = () => (
   <nav className={s.nav}>
-    <a className={s.link} href="/favorites">
+    <Link className={s.link} to="/favorites">
       <span className={s.text}>Избранное</span>
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path
@@ -13,8 +14,8 @@ export const Navigation = () => (
           strokeLinejoin="round"
         />
       </svg>
-    </a>
-    <a className={s.link} href="/cart">
+    </Link>
+    <Link className={s.link} to="/cart">
       <span className={s.text}>Корзина</span>
       <span>(0)</span>
       <svg
@@ -57,6 +58,6 @@ export const Navigation = () => (
           strokeLinecap="round"
         />
       </svg>
-    </a>
+    </Link>
   </nav>
 );

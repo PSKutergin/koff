@@ -16,6 +16,13 @@ export const fetchGoods = createAsyncThunk(
     });
 
     if (!response.ok) {
+      if (response.status === 401) {
+        return thunkAPI.rejectWithValue({
+          status: response.status,
+          error: "Access token expired",
+        });
+      }
+
       throw new Error("Failed to fetch goods");
     }
 

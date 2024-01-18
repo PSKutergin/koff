@@ -1,6 +1,6 @@
 import s from "./Main.module.scss";
-import { Goods } from "../../components/Goods/Goods.jsx";
-import { Catalog } from "../../components/Catalog/Catalog.jsx";
+import { Goods } from "../Goods/Goods.jsx";
+import { Catalog } from "../Catalog/Catalog.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchCategories } from "../../store/categories/categories.slice.js";
