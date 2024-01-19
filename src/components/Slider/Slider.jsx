@@ -7,8 +7,6 @@ export const Slider = ({ data }) => {
   const mainSlider = useRef(null);
   const thumbnailSlider = useRef(null);
 
-  console.log(data);
-
   const mainOptions = {
     type: "loop",
     perPage: 1,
